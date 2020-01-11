@@ -10,6 +10,8 @@ handleChange = (e) => {
     this.setState( (prevState, prevProps) => return { numberOfClicks: prevState.numberOfClicks + 1 })
   }
 
+*** this is shown in section 3, lesson 47 "Asynchorous setState" ***
+
 ** this is the best and safest way to update prevState-dependant-state because React batches multiple
 setState changes (if there are multiple ones) and in that batching mistakes are possible, state of one
 value can be changed by multiple components, so this way we ensure that at the time of the cange our
