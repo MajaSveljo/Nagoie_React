@@ -14,3 +14,10 @@ handleChange = (e) => {
 setState changes (if there are multiple ones) and in that batching mistakes are possible, state of one
 value can be changed by multiple components, so this way we ensure that at the time of the cange our
 component will have the correct value.
+
+** prevProps will only be available if we in our constructor pass props and pass them through super also
+meaning
+
+constructonr (props) {
+  super(props)
+}
