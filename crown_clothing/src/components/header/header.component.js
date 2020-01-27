@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 
 import { auth } from "../../firebase/firebase.utils";
 import CartIcon from "../cart-icon/cart-icon.component";
 import CartDropdown from "../cart-dropdown/cart-dropdown.component";
+import { selectCartHidden } from "../../redux/cart/cart.selectors";
+import { selectCurrnetUser } from "../../redux/user/user.selector";
 
 import { ReactComponent as Logo } from "../../assets/crown.svg";
 
@@ -37,12 +40,9 @@ const Header = ({ currentUser, hidden }) => (
   </div>
 );
 
-//destructure user from state and then from that user his property current user
-const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
-  // currentUser: state.user.currentUser
-  // now instead of code above code below can be used
-  currentUser,
-  hidden
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrnetUser,
+  hidden: selectCartHidden
 });
 
 export default connect(mapStateToProps)(Header);
