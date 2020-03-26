@@ -6,7 +6,7 @@ import CollectionPreview from '../../components/collection-preview/collection-pr
 
 import {selectCollections} from '../../redux/shop/shop.selectors';
 
-const ShopPage = (collections) => (
+const ShopPage = ({collections}) => (
     <div className="shop-page">
         {
             collections.map(({ id, ...otherCollectionProps}) => (
