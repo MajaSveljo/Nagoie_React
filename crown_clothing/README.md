@@ -1,5 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+When forked/cloned your own Stripe publishableKey (from Stripe account) should be set in stripe-button.component.
+It is found in Developers tab and then the API keys tab.
+
 ## Available Scripts
 
 In the project directory, you can run:
