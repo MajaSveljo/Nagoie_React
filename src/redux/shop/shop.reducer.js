@@ -21,7 +21,7 @@ const shopReducer = (state = INITIAL_STATE, action) => {
                 collections: action.payload
             }
 
-        case ShopActionTypes.FETCH_COLLECTIONS_SUCCESS:
+        case ShopActionTypes.FETCH_COLLECTIONS_FALIURE:
             return {
                 ...state,
                 isFetching: false,
