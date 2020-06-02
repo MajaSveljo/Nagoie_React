@@ -23,5 +23,3 @@ meaning
 constructonr (props) {
   super(props)
 }
-
-// testing git config
